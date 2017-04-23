@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="co.tagtalk.winemate.MyBottlesActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/my_bottles_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/my_bottles_activity_title"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/title_text_size"
+                    android:textColor="@color/text_white"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/my_bottles_home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_home_white_24px"
+                android:drawableStart="@drawable/ic_home_white_48dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp">
+            </Button>
+
+            <Button
+                android:id="@+id/my_bottles_bottle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_bottle_white_48dp"
+                android:drawableStart="@drawable/ic_bottle_white_48dp">
+            </Button>
+
+            <Button
+                android:id="@+id/my_bottles_group"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_group_white_48dp"
+                android:drawableStart="@drawable/ic_group_white_48dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginEnd="40dp">
+            </Button>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <ProgressBar
+            android:id="@+id/my_bottles_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <include layout="@layout/content_my_bottles"/>
+
+</android.support.design.widget.CoordinatorLayout>

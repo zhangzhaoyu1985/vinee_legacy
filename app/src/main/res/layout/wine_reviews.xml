@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/wine_info_reviewer_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@null"/>
+
+    <TextView
+        android:id="@+id/wine_info_reviewer_name"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/wine_info_reviewer_icon"
+        android:layout_toRightOf="@+id/wine_info_reviewer_icon"
+        android:layout_alignTop="@+id/wine_info_reviewer_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="@dimen/large_text_size"
+        android:maxLines="1"
+        android:textColor="@color/text_black"/>
+
+    <TextView
+        android:id="@+id/wine_info_rated_it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wine_info_activity_rated_it"
+        android:layout_toEndOf="@+id/wine_info_reviewer_name"
+        android:layout_toRightOf="@+id/wine_info_reviewer_name"
+        android:layout_alignBottom="@+id/wine_info_reviewer_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="@dimen/small_text_size"/>
+
+    <RatingBar
+        android:id="@+id/wine_info_reviewer_rating_bar_indicator"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/wine_info_rated_it"
+        android:layout_toRightOf="@+id/wine_info_rated_it"
+        android:layout_alignBottom="@+id/wine_info_reviewer_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="@color/rating_bar_background"
+        android:isIndicator="true"
+        android:progressTint="@color/rating_bar_progress"/>
+
+    <TextView
+        android:id="@+id/wine_info_review_time_elapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wine_info_reviewer_name"
+        android:layout_alignStart="@+id/wine_info_reviewer_name"
+        android:layout_alignBottom="@+id/wine_info_reviewer_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="@dimen/small_text_size"/>
+
+    <TextView
+        android:id="@+id/wine_info_review_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wine_info_reviewer_name"
+        android:layout_alignStart="@+id/wine_info_reviewer_name"
+        android:layout_alignRight="@+id/wine_info_rated_it"
+        android:layout_alignEnd="@+id/wine_info_rated_it"
+        android:layout_below="@+id/wine_info_reviewer_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/highlight_text_size"/>
+
+    <Button
+        android:id="@+id/wine_info_review_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/wine_info_reviewer_rating_bar_indicator"
+        android:layout_alignEnd="@+id/wine_info_reviewer_rating_bar_indicator"
+        android:layout_alignBottom="@+id/wine_info_review_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:visibility="invisible"/>
+
+
+    <View
+        android:id="@+id/wine_info_review_divider"
+        style="@style/Horizontal_Divider"
+        android:layout_below="@+id/wine_info_review_content"
+        android:layout_alignLeft="@+id/wine_info_reviewer_name"
+        android:layout_alignStart="@+id/wine_info_reviewer_name"/>
+
+</RelativeLayout>

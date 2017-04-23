@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    android:id="@+id/winery_info_single_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/redeem_single_item_wine_pic"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/redeem_single_item_wine_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/redeem_single_item_wine_pic"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/redeem_single_item_wine_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/redeem_single_item_wine_name"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/redeem_single_item_wine_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/redeem_single_item_wine_year"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/redeem_single_item_wine_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/redeem_single_item_wine_region"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/redeem_single_item_out_of_stock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/redeem_single_item_wine_points"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/redeem_points_activity_out_of_stock"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/redeem_single_item_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/redeem_single_item_wine_points"
+            android:gravity="center_horizontal|bottom"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/redeem_single_item_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/redeem_single_item_quantity_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/redeem_points_activity_quantity"
+                tools:text="Qty:"/>
+
+            <EditText
+                android:id="@+id/redeem_single_item_quantity_input"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:background="@drawable/edit_text_shadow_round"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="@dimen/small_text_size"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

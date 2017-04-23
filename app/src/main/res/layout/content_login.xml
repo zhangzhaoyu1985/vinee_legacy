@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_content_root_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="50dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="co.tagtalk.winemate.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <ImageView
+        android:id="@+id/login_winemate_logo"
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:src="@drawable/logo_new"/>
+
+    <TextView
+        android:id="@+id/login_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_toEndOf="@+id/login_winemate_logo"
+        android:layout_toRightOf="@+id/login_winemate_logo"
+        android:gravity="start|center_vertical"
+        android:text="@string/login_activity_app_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_winemate_logo"
+        android:background="@drawable/edit_text_shadow_round"
+        android:hint="@string/login_activity_username_hint"
+        android:inputType="text"
+        android:maxLength="40"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:textColorHint="#BDBDBD"/>
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_username"
+        android:layout_marginTop="10dp"
+        android:maxLength="16"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:background="@drawable/edit_text_shadow_round"
+        android:fontFamily="sans-serif"
+        android:hint="@string/login_activity_password_hint"
+        android:inputType="textPassword"
+        android:textColorHint="#BDBDBD"/>
+
+    <ToggleButton
+        android:id="@+id/login_show_hide_password_switch"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/password_toggle_button_selector"
+        android:checked="true"
+        android:layout_alignEnd="@+id/login_password"
+        android:layout_alignRight="@+id/login_password"
+        android:layout_alignTop="@+id/login_password"
+        android:text=""
+        android:textOff=""
+        android:textOn=""/>
+
+    <Button
+        android:id="@+id/login_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/login_password"
+        android:layout_alignRight="@+id/login_password"
+        android:layout_below="@+id/login_password"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:text="@string/login_activity_login_button_text"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/login_singup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_login_button"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/login_activity_signup_button_text"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/login_forgot_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/login_login_button"
+        android:layout_alignRight="@+id/login_login_button"
+        android:layout_below="@+id/login_login_button"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/login_activity_forgot_button_text"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"/>
+
+    <View
+        android:id="@+id/login_divider_left"
+        style="@style/Horizontal_Divider_Partial"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/login_singup_button"/>
+
+    <View
+        android:id="@+id/login_divider_right"
+        style="@style/Horizontal_Divider_Partial"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/login_singup_button"/>
+
+    <TextView
+        android:id="@+id/login_wechat_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_activity_wechat_signin_hit"
+        android:layout_below="@+id/login_singup_button"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/highlight_text_size"
+        android:layout_marginBottom="1dp"/>
+
+    <Button
+        android:id="@+id/login_wechat_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/login_divider_left"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/wechat_btn"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

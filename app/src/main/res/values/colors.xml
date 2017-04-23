@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8C123C</color>
+    <color name="colorPrimaryDark">#5A0C27</color>
+    <color name="colorAccent">#4CAF50</color>
+
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+    <color name="text_gray">#9E9E9E</color>
+    <color name="text_dark">#555555</color>
+    <color name="drawable_light">#D0D0D0</color>
+    <color name="drawable_dark">#888888</color>
+    <color name="button_dark">#888888</color>
+
+    <color name="rating_bar_background">#9E9E9E</color>
+    <color name="rating_bar_progress">#F9A825</color>
+
+    <color name="grid_view_background">#CFD8DC</color>
+</resources>

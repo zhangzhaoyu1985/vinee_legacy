@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Horizontal_Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/text_gray</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="Horizontal_Divider_Thin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/text_gray</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="Vertical_Divider">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/text_gray</item>
+    </style>
+
+    <style name="Horizontal_Divider_Partial">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/text_gray</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="Vertical_Divider_Thin">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/text_gray</item>
+    </style>
+
+    <style name="TransparentFrameWindowStyle" parent="android:style/Theme.Dialog"/>
+
+    <style name="WineMateDiagloStyle" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+</resources>

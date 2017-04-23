@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_content_root_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/auth_activity_background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="co.tagtalk.winemate.AuthenticationActivity"
+    tools:showIn="@layout/activity_authentication">
+
+
+    <ImageView
+        android:id="@+id/authentication_wine_picture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@null"/>
+
+    <ImageView
+        android:id="@+id/authentication_genuine_symbol"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/authentication_wine_picture"
+        android:layout_toRightOf="@+id/authentication_wine_picture"
+        android:contentDescription="@null"/>
+
+    <TextView
+        android:id="@+id/authentication_result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/authentication_genuine_symbol"
+        android:layout_alignStart="@+id/authentication_genuine_symbol"
+        android:layout_alignRight="@+id/authentication_genuine_symbol"
+        android:layout_alignEnd="@+id/authentication_genuine_symbol"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/authentication_genuine_symbol"
+        android:textSize="@dimen/small_text_size"/>
+
+    <Button
+        android:id="@+id/authentication_open_bottle"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignEnd="@+id/authentication_genuine_symbol"
+        android:layout_alignLeft="@+id/authentication_genuine_symbol"
+        android:layout_alignRight="@+id/authentication_genuine_symbol"
+        android:layout_alignStart="@+id/authentication_genuine_symbol"
+        android:layout_below="@+id/authentication_result_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/open_bottle_button"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/small_text_size"
+        android:gravity="end|center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <RatingBar
+        android:id="@+id/authentication_rate"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/rating_bar_background"
+        android:isIndicator="true"
+        android:progressTint="@color/rating_bar_progress"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/authentication_wine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/authentication_wine_picture"
+        android:layout_alignStart="@+id/authentication_wine_picture"
+        android:layout_above="@+id/authentication_wine_year"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/authentication_wine_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/authentication_wine_name"
+        android:layout_alignStart="@+id/authentication_wine_name"
+        android:layout_above="@+id/authentication_wine_region"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/authentication_wine_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/authentication_wine_name"
+        android:layout_alignStart="@+id/authentication_wine_name"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/authentication_view_more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:text="@string/authentication_activity_view_more_button"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/highlight_text_size"
+        android:textStyle="bold|italic"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/authentication_wrong_auth_code_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="45dp"
+        android:gravity="center_horizontal"
+        android:text="@string/authentication_activity_wrong_auth_code_reminder"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/large_text_size"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/authentication_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/authentication_result_text"
+        android:gravity="start"
+        android:text="@string/authentication_activity_contact_us"
+        android:textAllCaps="true"
+        android:textSize="@dimen/highlight_text_size"
+        android:layout_alignLeft="@+id/authentication_result_text"
+        android:layout_alignStart="@+id/authentication_result_text"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_black"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/authentication_contact_us_fake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/authentication_contact_us"
+        android:gravity="start"
+        android:text="@string/authentication_activity_contact_us_fake"
+        android:textSize="@dimen/highlight_text_size"
+        android:layout_alignLeft="@+id/authentication_result_text"
+        android:layout_alignStart="@+id/authentication_result_text"
+        android:visibility="gone"/>
+</RelativeLayout>

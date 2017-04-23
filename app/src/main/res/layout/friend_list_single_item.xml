@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/friend_list_user_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@null"
+        android:src="@drawable/user_icon_man"/>
+
+    <TextView
+        android:id="@+id/friend_list_user_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/friend_list_user_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/friend_list_user_icon"
+        android:layout_toRightOf="@+id/friend_list_user_icon"
+        android:maxLines="1"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/large_text_size"
+        tools:text="zhaoyuzhang"/>
+
+    <TextView
+        android:id="@+id/friend_list_user_full_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/friend_list_user_name"
+        android:layout_alignStart="@+id/friend_list_user_name"
+        android:layout_below="@+id/friend_list_user_name"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/friend_list_user_icon"
+        android:layout_toRightOf="@+id/friend_list_user_icon"
+        android:maxLines="1"
+        android:textSize="@dimen/small_text_size"
+        tools:text="Zhaoyu Zhang"/>
+
+    <Button
+        android:id="@+id/friend_list_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/friend_list_user_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorPrimary"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/friend_list_review_divider"
+        style="@style/Horizontal_Divider"
+        android:layout_below="@+id/friend_list_follow"/>
+
+</RelativeLayout>
